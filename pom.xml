@@ -18,22 +18,7 @@
 			<artifactId>poi-ooxml</artifactId>
 			<version>3.14-beta1</version>
 		</dependency>
-		<!-- 沙箱模块的API定义二方包 这个二方包可以被声明为provided -->
-		<dependency>
-			<groupId>com.alibaba.jvm.sandbox</groupId>
-			<artifactId>sandbox-api</artifactId>
-			<version>1.0.9</version>
-			<scope>provided</scope>
-		</dependency>
-
-		<!-- javax.servlet的三方包 在沙箱模块中需要用到HttpServletReuqest和HttpServletResponse 
-			整个沙箱模块被放置在Servlet容器中完成加载 -->
-		<dependency>
-			<groupId>javax.servlet</groupId>
-			<artifactId>javax.servlet-api</artifactId>
-			<version>3.0.1</version>
-			<scope>provided</scope>
-		</dependency>
+		
 	</dependencies>
 	<build>
 		<plugins>
@@ -48,9 +33,6 @@
 				</configuration>
 			</plugin>
 
-			<!-- <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-surefire-plugin</artifactId> 
-				<configuration> <skipTests>true</skipTests> <testFailureIgnore>true</testFailureIgnore> 
-				</configuration> </plugin> -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
